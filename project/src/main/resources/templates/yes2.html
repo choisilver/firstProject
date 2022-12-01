@@ -1,0 +1,1362 @@
+
+
+
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <!--#### Open Graph Meta ####-->
+  <meta property="og:title" content="YES24 티켓"/>
+  <meta property="og:description" content=""/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="http://ticket.yes24.com/New/Main.aspx" />
+  <meta property="og:image" content="http://tkfile.yes24.com/imgNew/yes24ticket.gif" />
+  <meta property="og:site_name" content="YES24 티켓" />
+  <!--#### Open Graph Meta ####-->
+
+  <title>진정해!</title>
+
+  <link rel='stylesheet' type='text/css' href='http://tkfile.yes24.com/New/Css/reset.css' />
+  <link rel='stylesheet' type='text/css' href='http://tkfile.yes24.com/New/Css/common.css?v=10' /> 
+  <link rel='stylesheet' type='text/css' href='http://tkfile.yes24.com/New/Css/main_1.css?v=2020012203' /> 
+
+
+  <link rel='shortcut icon' href='http://tkfile.yes24.com/img/favicon.ico?ver=150825a' type='image/x-icon'/><script type='text/javascript' src='http://tkfile.yes24.com/New/Js/jquery-3.4.1_min.js'></script><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PVHFWWM');</script><!-- End Google Tag Manager -->
+  <script type='text/javascript' src='http://tkfile.yes24.com/New/Js/swiper_min.js'></script><script type='text/javascript' src='http://tkfile.yes24.com/New/Js/Chart.bundle_min.js'></script><script type='text/javascript' src='http://tkfile.yes24.com/New/Js/utils.js'></script><script type='text/javascript' src='http://tkfile.yes24.com/New/Js/jquery.mCustomScrollbar_min.js'></script><script type='text/javascript' src='http://tkfile.yes24.com/New/Js/common.js?v=247'></script><script type='text/javascript' src='http://tkfile.yes24.com/New/Js/jquery.lazy.min.js'></script><script type='text/javascript' src='http://tkfile.yes24.com/New/Js/jquery.cookie.js'></script><script type='text/javascript' src='http://tkfile.yes24.com/New/Js/jquery.url.js'></script><script type='text/javascript' src='http://tkfile.yes24.com/New/Js/base64.js'></script><script type='text/javascript' src='http://tkfile.yes24.com/New/Js/babel.js'></script><script type='text/javascript' src='http://tkfile.yes24.com/New/Js/polyfill.js'></script>
+  <script type='text/javascript' src='/inc/js/custom-1.8.21/ui/jquery-ui-1.8.21.custom.min.js'></script>
+
+  <script type='text/javascript' src='http://tkfile.yes24.com/New/Js/jry_home_jdefault.js'></script><script type='text/javascript' src='http://tkfile.yes24.com/New/Js/jry_home_jdialog.js'></script>
+  <script type='text/javascript' src='/inc/js/jry_default_new.js?v=247'></script>
+
+  
+
+  <style type="text/css">
+    body{font-family: 'NanumBarunGothic', '맑은 고딕', 'Malgun Gothic', sans-serif;}
+  </style>
+ </head>
+ <body>
+ 
+
+<script type="text/javascript">
+    $(document).ready(function () {
+       if (0 == "1") {
+            getExhbt();
+        }
+    });
+
+    function getExhbt() {
+        $.ajax({
+            async: true,
+            type: "POST",
+            url: "/New/Controls/Main/Ajax/axExhbt.aspx",
+            dataType: "html",
+            success: function (data, textStatus) {
+                if (data != "") {
+                    //$(".sec07").after(data)
+                    $(".sec07").append(data)
+                }
+            },
+            error: function (xhr, textStatus, errorThrown) {
+            },
+            beforeSend: function (xhr, settings) {
+            },
+            complete: function (xhr, textStatus) {
+            }
+        });
+    }
+</script>
+ <form name="mainForm" method="post" action="./" id="mainForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTEwMzE1MDc3Mw9kFgICAQ9kFgICBA9kFgJmD2QWAgIBDxYCHgRUZXh0BcobPGRpdiBjbGFzcz0nc3dpcGVyLXNsaWRlJz48YSBocmVmPScvUGFnZXMvTm90aWNlL05vdGljZU1haW4uYXNweD8jaWQ9MTI0OTAmR2NvZGU9MDA5XzIwOF8wMDEnPjxpbWcgc3JjPSdodHRwOi8vdGtmaWxlLnllczI0LmNvbS91cGxvYWQyL0JvYXJkTm90aWNlLzIwMjIxMS8yMDIyMTEyOC8yMDIyMTEyOC01OWM2Y2MzOS1lZTNlLTRlY2ItOGJjMi0yMjYxMTU1ZTNiN2QuanBnL2RpbXMvcXVhbGl0eS83MC8nIGFsdD0nJyBjbGFzcz0nbGF6eWxvYWQnIC8+PGRpdiBjbGFzcz0nZG9udXQtYXJlYSc+PGNhbnZhcyBpZD0nY2hhcnQtYXJlYTEyNDkwJyBjbGFzcz0nZG9udXQnIC8+PC9kaXY+PGRpdiBjbGFzcz0nZG9udXQtZGRheSB0b2RheSc+VG9kYXk8L2Rpdj48ZGl2IGNsYXNzPSd0aWNrZXQtdHh0Jz48cCBjbGFzcz0ndGlja2V0LWRhdGUnPjIwMjIuMTIuMDEo66qpKSAxOTowMDwvcD48cCBjbGFzcz0ndGlja2V0LXRpdCc+7JWI7JiI7J2A64uo64+F7L2Y7ISc7Yq4IOKAmOygnDbtmowgKOyViOuwgOumsCkg7Jik7YOA7L+g66as7Iqk66eI7Iqk4oCZIO2LsOy8k+yYpO2UiCDslYjrgrQ8L3A+PC9kaXY+PC9hPjwvZGl2PjxkaXYgY2xhc3M9J3N3aXBlci1zbGlkZSc+PGEgaHJlZj0nL1BhZ2VzL05vdGljZS9Ob3RpY2VNYWluLmFzcHg/I2lkPTEyNDgzJkdjb2RlPTAwOV8yMDhfMDAxJz48aW1nIHNyYz0naHR0cDovL3RrZmlsZS55ZXMyNC5jb20vdXBsb2FkMi9QZXJmQmxvZy8yMDIyMTEvMjAyMjExMzAvMjAyMjExMzAtNDQzMTEuanBnL2RpbXMvcXVhbGl0eS83MC8nIGFsdD0nJyBjbGFzcz0nbGF6eWxvYWQnIC8+PGRpdiBjbGFzcz0nZG9udXQtYXJlYSc+PGNhbnZhcyBpZD0nY2hhcnQtYXJlYTEyNDgzJyBjbGFzcz0nZG9udXQnIC8+PC9kaXY+PGRpdiBjbGFzcz0nZG9udXQtZGRheSB0b2RheSc+VG9kYXk8L2Rpdj48ZGl2IGNsYXNzPSd0aWNrZXQtdHh0Jz48cCBjbGFzcz0ndGlja2V0LWRhdGUnPjIwMjIuMTIuMDEo66qpKSAxNDowMDwvcD48cCBjbGFzcz0ndGlja2V0LXRpdCc+MjAyMiDsoITqta3tiKzslrQg7L2Y7ISc7Yq444CI67CV7LC96re844CJLSDsiJjsm5DslbXsvZwg7Yuw7LyT7Jik7ZSIIOyViOuCtDwvcD48L2Rpdj48L2E+PC9kaXY+PGRpdiBjbGFzcz0nc3dpcGVyLXNsaWRlJz48YSBocmVmPScvUGFnZXMvTm90aWNlL05vdGljZU1haW4uYXNweD8jaWQ9MTI0ODAmR2NvZGU9MDA5XzIwOF8wMDEnPjxpbWcgc3JjPSdodHRwOi8vdGtmaWxlLnllczI0LmNvbS91cGxvYWQyL1BlcmZCbG9nLzIwMjIxMS8yMDIyMTEyOS8yMDIyMTEyOS00NDI2Mi5qcGcvZGltcy9xdWFsaXR5LzcwLycgYWx0PScnIGNsYXNzPSdsYXp5bG9hZCcgLz48ZGl2IGNsYXNzPSdkb251dC1hcmVhJz48Y2FudmFzIGlkPSdjaGFydC1hcmVhMTI0ODAnIGNsYXNzPSdkb251dCcgLz48L2Rpdj48ZGl2IGNsYXNzPSdkb251dC1kZGF5IHRvZGF5Jz5Ub2RheTwvZGl2PjxkaXYgY2xhc3M9J3RpY2tldC10eHQnPjxwIGNsYXNzPSd0aWNrZXQtZGF0ZSc+MjAyMi4xMi4wMSjrqqkpIDE4OjAwPC9wPjxwIGNsYXNzPSd0aWNrZXQtdGl0Jz5DT1VOVERPV04gRkFOVEFTWSAyMDIyLTIwMjMg7Yuw7LyT7Jik7ZSI7JWI64K0PC9wPjwvZGl2PjxwIGNsYXNzPSd0aWNrZXQtdGFpbCc+PHNwYW4gY2xhc3M9J3JlJz7ri6jrj4U8L3NwYW4+PC9wPjwvYT48L2Rpdj48ZGl2IGNsYXNzPSdzd2lwZXItc2xpZGUnPjxhIGhyZWY9Jy9QYWdlcy9Ob3RpY2UvTm90aWNlTWFpbi5hc3B4PyNpZD0xMjQ3MyZHY29kZT0wMDlfMjA4XzAwMSc+PGltZyBzcmM9J2h0dHA6Ly90a2ZpbGUueWVzMjQuY29tL3VwbG9hZDIvUGVyZkJsb2cvMjAyMjExLzIwMjIxMTMwLzIwMjIxMTMwLTQ0MzE1LmpwZy9kaW1zL3F1YWxpdHkvNzAvJyBhbHQ9JycgY2xhc3M9J2xhenlsb2FkJyAvPjxkaXYgY2xhc3M9J2RvbnV0LWFyZWEnPjxjYW52YXMgaWQ9J2NoYXJ0LWFyZWExMjQ3MycgY2xhc3M9J2RvbnV0JyAvPjwvZGl2PjxkaXYgY2xhc3M9J2RvbnV0LWRkYXkgdG9kYXknPlRvZGF5PC9kaXY+PGRpdiBjbGFzcz0ndGlja2V0LXR4dCc+PHAgY2xhc3M9J3RpY2tldC1kYXRlJz4yMDIyLjEyLjAxKOuqqSkgMTk6MDA8L3A+PHAgY2xhc3M9J3RpY2tldC10aXQnPuunqOyKpO2LsOyWtCBbTWFzdGVyIExpZmVdIO2LsOy8k+yYpO2UiCDslYjrgrQ8L3A+PC9kaXY+PHAgY2xhc3M9J3RpY2tldC10YWlsJz48c3BhbiBjbGFzcz0ncmUnPuuLqOuPhTwvc3Bhbj48L3A+PC9hPjwvZGl2PjxkaXYgY2xhc3M9J3N3aXBlci1zbGlkZSc+PGEgaHJlZj0nL1BhZ2VzL05vdGljZS9Ob3RpY2VNYWluLmFzcHg/I2lkPTEyNDY3Jkdjb2RlPTAwOV8yMDhfMDAxJz48aW1nIHNyYz0naHR0cDovL3RrZmlsZS55ZXMyNC5jb20vdXBsb2FkMi9QZXJmQmxvZy8yMDIyMTEvMjAyMjExMzAvMjAyMjExMzAtNDQyNTJfMi5qcGcvZGltcy9xdWFsaXR5LzcwLycgYWx0PScnIGNsYXNzPSdsYXp5bG9hZCcgLz48ZGl2IGNsYXNzPSdkb251dC1hcmVhJz48Y2FudmFzIGlkPSdjaGFydC1hcmVhMTI0NjcnIGNsYXNzPSdkb251dCcgLz48L2Rpdj48ZGl2IGNsYXNzPSdkb251dC1kZGF5IHRvZGF5Jz5Ub2RheTwvZGl2PjxkaXYgY2xhc3M9J3RpY2tldC10eHQnPjxwIGNsYXNzPSd0aWNrZXQtZGF0ZSc+MjAyMi4xMi4wMSjrqqkpIDEyOjAwPC9wPjxwIGNsYXNzPSd0aWNrZXQtdGl0Jz7si5zqsIDroJsg7JWg7ZSE7YSwIOyEueyKpCDrgrTtlZzqs7Xsl7DvvIhDaWdhcmV0dGVzIEFmdGVyIFNleCBMaXZlIGluIFNlb3Vs77yJ7Yuw7LyT7Jik7ZSIIOyViOuCtDwvcD48L2Rpdj48cCBjbGFzcz0ndGlja2V0LXRhaWwnPjxzcGFuIGNsYXNzPSdvcic+7ISg7JiI66ekPC9zcGFuPjwvcD48L2E+PC9kaXY+PHNjcmlwdD5mdW5jdGlvbiBkaXNwbGF5RG9udXQoKXtjb25maWcuZGF0YS5kYXRhc2V0c1swXS5kYXRhID0gWzEyLjUqKDgtMCksMTIuNSowXTtuZXcgQ2hhcnQoZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2NoYXJ0LWFyZWExMjQ5MCcpLmdldENvbnRleHQoJzJkJyksIGNvbmZpZyk7Y29uZmlnLmRhdGEuZGF0YXNldHNbMF0uZGF0YSA9IFsxMi41Kig4LTApLDEyLjUqMF07bmV3IENoYXJ0KGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjaGFydC1hcmVhMTI0ODMnKS5nZXRDb250ZXh0KCcyZCcpLCBjb25maWcpO2NvbmZpZy5kYXRhLmRhdGFzZXRzWzBdLmRhdGEgPSBbMTIuNSooOC0wKSwxMi41KjBdO25ldyBDaGFydChkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnY2hhcnQtYXJlYTEyNDgwJykuZ2V0Q29udGV4dCgnMmQnKSwgY29uZmlnKTtjb25maWcuZGF0YS5kYXRhc2V0c1swXS5kYXRhID0gWzEyLjUqKDgtMCksMTIuNSowXTtuZXcgQ2hhcnQoZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2NoYXJ0LWFyZWExMjQ3MycpLmdldENvbnRleHQoJzJkJyksIGNvbmZpZyk7Y29uZmlnLmRhdGEuZGF0YXNldHNbMF0uZGF0YSA9IFsxMi41Kig4LTApLDEyLjUqMF07bmV3IENoYXJ0KGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjaGFydC1hcmVhMTI0NjcnKS5nZXRDb250ZXh0KCcyZCcpLCBjb25maWcpO308L3NjcmlwdD5kZCs1iZYtdyfAa9JbGBwtdQ+PizNi" />
+</div>
+
+<div>
+
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="176B98C2" />
+</div>            
+ <div id='dialogAlert' style='display:none;'></div><div id='dialogConfirm' style='display:none;'></div><div id='dialogPopup' style='display:none;'></div>
+ <img id='imgAjaxLoader' style='display:none;' src='http://tkfile.yes24.com/img/ajax/loader.gif' alt='ajaxLoader' /><!-- Google Tag Manager (noscript) --><noscript><iframe src='https://www.googletagmanager.com/ns.html?id=GTM-PVHFWWM'height='0' width='0' style='display:none;visibility:hidden'></iframe></noscript><!-- End Google Tag Manager (noscript) -->
+ <div class="cp-top-wrap">
+ <!--#### consice 공통 ####-->
+ 
+
+ <div class="consice" id="consice" >
+    <div class="consice-left">
+        <a href="http://www.yes24.com" target="_blank">YES24</a>
+        <a href="http://www.yes24.com/Mall/Main/Music/003?CategoryNumber=003" target="_blank" class="ccl-etc3">CD/LP</a>
+        <a href="http://www.yes24.com/Mall/Main/Dvd/004?CategoryNumber=004" target="_blank" class="ccl-etc4">DVD/BD</a>
+        <a href="https://yes24livehall.com" target="_blank" class="ccl-etc1">예스24라이브홀</a>
+        <a href="https://yes24stage.com" target="_blank" class="ccl-etc2">예스24스테이지</a>
+    </div>
+    <div class="consice-right">
+        <a href="#" id="consiceLogin">로그인</a>
+        <a href="http://www.yes24.com/Member/FTMypageMain.aspx" target="_blank" >마이페이지</a>
+        <a href="http://www.yes24.com/Mall/Help/Main" target="_blank">고객센터</a>
+    </div>
+ </div>
+
+ <script type="text/javascript">
+     $(document).ready(function () {
+
+         if (('False').toLowerCase() == 'false') {
+             $('#consiceLogin').html("로그인");
+
+             if (sTLPage == "1") {
+                $('#consiceLogin').attr("href", "/Pages/Login/LoginEnt.aspx?ReturnURL=" + jsf_base_GetYesFormatUrl());
+             }else{
+                $('#consiceLogin').attr("href", "https://www.yes24.com/Templates/FTLogin.aspx?ReturnURL=" + jsf_base_GetYesFormatUrl());
+             }
+         }
+         else {
+             $('#consiceLogin').html("로그아웃");
+
+             if (sTLPage == "1") {
+                $('#consiceLogin').attr("href", "/Pages/Login/LogoutEnt.aspx?ReturnURL=http://ticket.yes24.com");
+             }else{
+                $('#consiceLogin').attr("href", "https://www.yes24.com/Templates/FTLogOut.aspx?ReturnURL=http://ticket.yes24.com");
+             }
+         }
+
+     });
+
+     $(function(){
+         if ($.cookie("EXanadu") != null || $.cookie("Benefit") == "2314") {
+            $(".consice").hide();
+            $(".perform-top").css("top", "0px");
+            $("#pf-gnb-wrap").css("top", "0px");
+
+            if(99 == 1){ //장르메인
+                $(".cp-top-wrap").next().css("top", "100px");
+                $("section").first().css("padding-top", "100px");
+            }
+            else if(99 == 2){ //상세,경량화상세
+                $(".renew-wrap").css("top", "100px");
+            }
+            else if(99 == 3){ //장르리스트
+                $(".list-sec").css("padding-top","100px");
+            }
+            else{ //그 외
+                $(".content-min-wrap").css("padding-top", "100px");
+
+                if(99 == 4){ //검색
+                    $(".srch-scroll-slide").css("padding-top","100px");
+                }
+            }
+        }
+    });
+    
+</script>
+ <!--#### consice 공통 ####-->
+
+ <!--#### Header 공통 ####-->
+ <header class="perform-top" id="perform-top">
+    
+
+
+<!-- 공무원연금관리공단 -->
+<!--
+
+<div id="divGepsMain" class="floating" style="width:245px;position:absolute; left:50%;top:250px; margin-left:-125px;"></div>
+<map name="map_floating">
+<area shape="rect" coords="200,5,240,40" href="javascript:$('#divGepsMain').hide()" alt="닫기"> 
+<area shape="rect" coords="40,40,200,210" href="/Pages/Events/HotEvent/PromotionInfo.aspx?id=2602" alt="단독할인공연 기획전 바로가기"> 
+</map>
+-->
+<!-- 공무원연금관리공단 -->
+
+
+    <div class="pf-left">
+        <a href="#" class="pf-ham">
+            <span class="pf-ham1"></span>
+            <span class="pf-ham2"></span>
+            <span class="pf-ham3"></span>
+        </a>
+        <h1><a href="/New/Main.aspx?Gcode=009_201" class="pf-logo"><img src="http://tkfile.yes24.com/imgNew/common/pf-logo.png" alt="" class="trans" /><img src="http://tkfile.yes24.com/imgNew/common/pf-logo-w.png" alt="" class="fixed" /></a></h1>
+    </div>
+    <div class="pf-center">
+        <h2><a href="/New/Genre/GenreMain.aspx?genre=15456&Gcode=009_202_001"
+        
+        >콘서트<span></span></a>
+
+        
+        </h2>
+        <h2><a href="/New/Genre/GenreMain.aspx?genre=15457&Gcode=009_202_002"
+        
+        >뮤지컬<span></span></a>
+
+        
+        </h2>
+        <h2><a href="/New/Genre/GenreMain.aspx?genre=15458&Gcode=009_202_003"
+        
+        >연극<span></span></a>
+
+        
+        </h2>
+        <h2><a href="/New/Genre/GenreMain.aspx?genre=15459&Gcode=009_202_004"
+        
+        >클래식<span></span></a>
+
+        
+        </h2>
+        <h2><a href="/New/Genre/GenreMain.aspx?genre=15460&Gcode=009_202_005"
+        
+        >전시<span></span></a>
+
+        
+        </h2>
+        <h2><a href="/New/Genre/GenreMain.aspx?genre=999&Gcode=009_202_006"
+        
+        >아동<span></span></a>
+
+        
+        </h2>
+    </div>
+    <div class="pf-right">
+        <div class="pf-right-menu">
+            <a href="/MDShop" target="_blank">MD#</a>
+            <a href="/New/Recommend/Area.aspx" target="_blank">지역</a>
+            <a href="/Rank/All" target="_blank">랭킹</a>
+            <a href="/New/Events/Main.aspx" target="_blank">이벤트</a>
+        </div>
+        <div class="pf-top-srch" autocomplete="off">
+            <input type="text" id="searchWord" />
+            <input type="hidden" name="" id="searchType" value="" />
+            <a href="#" onclick="jsf_mm_Search();"><img src="http://tkfile.yes24.com/imgNew/common/pf-srch.png" alt="" class="trans" /><img src="http://tkfile.yes24.com/imgNew/common/pf-srch-w.png" alt="" class="fixed" /></a>
+        </div>
+        <a href="/MyPage?Gcode=009_204" class="my-ticket"><span>MY티켓</span></a>
+        <a href="/English?Gcode=009_205" class="global" target="_blank"><span>GLOBAL</span></a>
+    </div>
+    <!--햄버거메뉴-->
+    
+
+    <div class="pf-gnb-wrap" id="pf-gnb-wrap">
+        <div class="pf-gnb-top">
+            <a href="#" class="pf-ham">
+                <span class="pf-ham1"></span>
+                <span class="pf-ham2"></span>
+                <span class="pf-ham3"></span>
+            </a>            
+        </div>
+        <div class="pf-gnb-box">
+            <div class="pf-gnb-scroll-wrap">
+                <ul class="pf-gnb-list1">
+                    <li><h2><a href="/New/Genre/GenreMain.aspx?genre=15456&Gcode=009_202_001">콘서트</a></h2><span></span>
+                        <ul class="pf-gnb-2depth">
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=1&genre=15456">전체보기</a></li>
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=2&genre=15462">국내뮤지션</a></li>
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=2&genre=15463">해외뮤지션</a></li>
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=2&genre=15464">페스티벌</a></li>
+                        </ul>
+                    </li>
+                    <li><h2><a href="/New/Genre/GenreMain.aspx?genre=15457&Gcode=009_202_002">뮤지컬</a></h2><span></span>
+                        <ul class="pf-gnb-2depth">
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=1&genre=15457">전체보기</a></li>
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=2&genre=15465">라이선스</a></li>
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=2&genre=15466">오리지널</a></li>
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=2&genre=15467">창작</a></li>
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=2&genre=15468">넌버벌 퍼포먼스</a></li>
+                        </ul>
+                    </li>
+                    <li><h2><a href="/New/Genre/GenreMain.aspx?genre=15458&Gcode=009_202_003">연극</a></h2><span></span>
+                        <ul class="pf-gnb-2depth">
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=1&genre=15458">전체보기</a></li>
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=2&genre=15469">대학로</a></li>
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=2&genre=15470">기타지역</a></li>
+                        </ul>
+                    </li>
+                    <li><h2><a href="/New/Genre/GenreMain.aspx?genre=15459&Gcode=009_202_004">클래식/국악/무용</a></h2><span></span>
+                        <ul class="pf-gnb-2depth">
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=1&genre=15459">전체보기</a></li>
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=2&genre=15471">클래식</a></li>
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=2&genre=15473">발레/무용</a></li>
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=2&genre=15474">국악</a></li>
+                        </ul>
+                    </li>
+                    <li><h2><a href="/New/Genre/GenreMain.aspx?genre=15460&Gcode=009_202_005">전시/행사</a></h2><span></span>
+                        <ul class="pf-gnb-2depth">
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=1&genre=15460">전체보기</a></li>
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=2&genre=15475">전시</a></li>
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=2&genre=15476">체험/행사</a></li>
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=2&genre=15477">워터파크/스파</a></li>
+                        </ul>
+                    </li>
+                    <li><h2><a href="/New/Genre/GenreMain.aspx?genre=999&Gcode=009_202_006">아동/가족</a></h2><span></span>
+                        <ul class="pf-gnb-2depth">
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=1&genre=999">전체보기</a></li>
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=2&genre=9991">뮤지컬</a></li>
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=2&genre=9992">연극</a></li>
+                            <li><a href="/New/Genre/GenreList.aspx?genretype=2&genre=9993">기타</a></li>
+                        </ul>                   
+                    </li>
+                </ul><!--pf-gnb-list1-->
+                <div class="pf-gnb-list2">
+                    <a href="/New/Rank/Ranking.aspx " class="pf-gnb-btn1">랭킹</a><a href="/New/Recommend/Area.aspx" class="pf-gnb-btn2">지역별</a><a href="/New/Recommend/Theater.aspx" class="pf-gnb-btn3">공연장</a>
+                </div><!--pf-gnb-list2-->
+                <ul class="pf-gnb-list3">
+                    <li><a href="/Pages/Notice/NoticeMain.aspx">공지사항</a></li>
+                    <li><a href="/Pages/Events/Main.aspx">이벤트</a></li>
+                    <li><a href="/Pages/Magazine/Magazine/MagazineMain.aspx">읽을거리</a></li>
+                    <li><a href="/Pages/UserGuide/BookingGuide.aspx">이용안내</a></li>
+                </ul><!--pf-gnb-list3-->
+                <div class="pf-gnb-list4">
+                    <p class="pf-gnb-tit"><a href="/MyPage?Gcode=009_106_002" id="leftMyTicket">MY티켓</a></p>
+                    <ul>
+                        <li><a href="/Pages/MyPage/MyOrder.aspx?Gcode=009_106_001" id="leftMyOrder" class="pf-gnb-btn4">예매확인/취소</a></li>
+                    </ul>               
+                    <p class="pf-gnb-tit">최근 본 상품</p>
+                    
+
+<div class="pf-gnb-list4-slide gnbslide2">
+    <!--최근본상품 있을때-->
+    <div class="be-list" style="display:block;">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class='swiper-slide'><a href='/Pages/Perf/Detail/Detail.aspx?idPerf=43094&Gcode=009_130_004'><img src='http://tkfile.yes24.com/upload2/PerfBlog/202211/20221114/20221114-43094.jpg' /></a></div>
+            </div>                      
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <!--최근본상품 없을때-->
+    <div class="no-list" style="display:none;">최근 본 공연<br />정보가<br />없습니다.</div>
+</div>
+                </div><!--pf-gnb-list4-->
+                <div class="pf-gnb-list5">
+                <a href="/MDShop" target="_blank">MD#</a>
+                <a href="/English" target="_blank">GLOBAL</a>
+                </div><!--pf-gnb-list5-->   
+            </div>
+        </div>
+        <a href="#" class="pf-gnb-close"></a>
+    </div>
+
+    <!--햄버거메뉴-->
+    <!--검색결과-->
+    
+
+    <div class="pf-srch-drop">
+        <div class="before">
+            <div class="left before-left" style="display:none">
+                <p class="drop-tit">인기검색어</p>
+                <p class="drop-date">2022.11.30 기준</p>
+                <ul id="ulFavoriteSearchWord">
+                </ul>               
+            </div>
+            <div class="right before-right both">
+                <p class="drop-tit">최근검색어</p>
+                <p class="drop-del"><a href="#" onclick="fax_RemoveRecentSearchWord();">최근검색어삭제</a></p>             
+                <p class="drop-none">
+                    최근검색어가 없습니다
+                </p>
+                <ul id="ulRecentSearchWord">
+                </ul>
+            </div>
+        </div>
+        <div class="after">
+            <div class="left after-left">
+                <ul id="ulAutoSearchWord">
+                </ul>
+            </div>
+            <div class="right after-right">
+                <a href="#">
+                <div class="drop-tail" onclick="goDetailByWord();">
+                    <img id="imgSearchAuto" src="//tkfile.yes24.com/Upload/poster_default.gif" alt="" />
+                    <p class="drop-tail-tit" id="titSearchAuto"></p>
+                    <p class="drop-tail-date" id="dateSearchAuto"></p>
+                </div>
+                </a>
+            </div>
+        </div>
+        <a href="#" class="drop-close"><img src="http://tkfile.yes24.com/imgNew/common/drop-close.png" alt="" /></a>
+    </div>
+
+<script type='text/javascript' src="/New/Controls/Header/Scripts/SearchAuto.js"></script>
+<script type='text/javascript' src="/New/Controls/Header/Scripts/SearchWord.js"></script>
+<script type="text/javascript">
+    var searchAutoIdPerf = "";
+    $(document).ready(function () {
+        $("#searchWord").jry_Search_autoComplete();
+
+        $("#searchWord").unbind("keypress.searchWord").bind("keypress.searchWord", function (evt) { if (evt.which == 13) { jsf_mm_Search(); return false; } });
+    });
+
+    function jsf_mm_Search() {
+        if (document.getElementById('searchWord').value.length == 0) {
+            //jsf_Alert("검색어를 입력하세요.");
+            alert("검색어를 입력하세요.");
+            
+            $("#searchWord").focus();
+            return false;
+        }
+        else {
+            fax_AddRecentSearchWord();
+
+            location.href = "/Pages/Search/SearchList.aspx?SearchText=" + escape($("#searchWord").val()) + "&SearchType=" + escape($("#searchType").val()) + "&Gcode=009_203";
+        }
+    }
+
+    function goSearchByWord(str) {
+        fax_AddRecentSearchWord();
+
+        location.href = "/Pages/Search/SearchList.aspx?SearchText=" + escape(str) + "&Gcode=009_203";
+    }
+
+    function goDetailByWord() {
+        if(searchAutoIdPerf != "")
+            location.href = "/Pages/Perf/Detail/Detail.aspx?IdPerf=" + searchAutoIdPerf + "&Gcode=009_203";
+    }
+    
+</script>
+    <!--검색결과-->
+
+
+
+<script type="text/javascript">
+    var sTLPage = '0';
+
+    $(document).ready(function () {
+
+        //공무원연금관리공단
+//        if ($.cookie("corpCookie") == "0000035") {
+//            $("#divGepsMain").html($("#divgeps").html());
+//        }
+
+        $("a.my-ticket, #leftMyTicket, #leftMyOrder").on('click',function(e){
+            e.preventDefault();
+            
+            if (('False').toLowerCase() == 'false') {
+                alert("로그인을 먼저 해주세요.");
+
+                if (sTLPage == "1") {
+                    location.href = "/Pages/Login/LoginEnt.aspx?ReturnURL=http://ticket.yes24.com/Pages/MyPage/MyPageMain.aspx";
+                }
+                else{
+                    location.href = "https://www.yes24.com/Templates/FTLogin.aspx?ReturnURL=http://ticket.yes24.com/Pages/MyPage/MyPageMain.aspx";
+                }
+            } else {
+                $(location).attr('href', $(this).attr("href"));
+            }
+
+        });
+
+        //$(".pf-top-srch").hide(); // 도서 점검
+
+    });
+
+    
+</script>
+ </header>
+ <!--#### Header 공통 ####-->
+ </div>
+ 
+ <!--#### 빅배너 ####-->
+ 
+
+ <div class="pf-kvslide-wrap" style="background:#000;">
+    <div class='pf-kvslide'><div class='kv-item'  style='opacity:1; z-index:1;' colorbg=''><a  href='/Perf/44262?Gcode=009_206'><img src='http://tkfile.yes24.com/Upload2/Display/202212/20221201/wel_mv_44262.jpg/dims/quality/70/' alt='' class='lazyload' /></a><a class='pf-kv-text white on' href='/Perf/44262?Gcode=009_206'><p class='sub-tit'></p><p class='main-tit'></p><p class='info-tit'></p></a></div><div class='kv-item'  colorbg=''><a  href='/Perf/43815?Gcode=009_206'><img src='http://tkfile.yes24.com/Upload2/Display/202210/20221017/wel_mv_2022.jpg/dims/quality/70/' alt='' class='lazyload' /></a><a class='pf-kv-text white on' href='/Perf/43815?Gcode=009_206'><p class='sub-tit'></p><p class='main-tit'></p><p class='info-tit'></p></a></div><div class='kv-item'  colorbg=''><a  href='http://ticket.yes24.com/Pages/Genre/GenreBridge.aspx?genre=15456&id=1059&Gcode=009_206'><img src='http://tkfile.yes24.com/Upload2/Display/202205/20220510/wel_mv_42123_2.jpg/dims/quality/70/' alt='' class='lazyload' /></a><a class='pf-kv-text white on' href='http://ticket.yes24.com/Pages/Genre/GenreBridge.aspx?genre=15456&id=1059&Gcode=009_206'><p class='sub-tit'>                        <br>                         <br></p><p class='main-tit'>                        <br>                         <br></p><p class='info-tit'>                        <br>                         <br></p></a></div><div class='kv-item'  colorbg=''><a  href='/Perf/44048?Gcode=009_206'><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221110/wel_mv_44048.jpg/dims/quality/70/' alt='' class='lazyload' /></a><a class='pf-kv-text white on' href='/Perf/44048?Gcode=009_206'><p class='sub-tit'>                        <br>                         <br></p><p class='main-tit'>                        <br>                         <br></p><p class='info-tit'>                        <br>                         <br></p></a></div><div class='kv-item'  colorbg=''><a  href='/Perf/42947?Gcode=009_206'><img src='http://tkfile.yes24.com/Upload2/Display/202207/20220720/wel_mv_.png/dims/quality/70/' alt='' class='lazyload' /></a><a class='pf-kv-text white on' href='/Perf/42947?Gcode=009_206'><p class='sub-tit'></p><p class='main-tit'></p><p class='info-tit'></p></a></div><div class='kv-item'  colorbg=''><a  href='/Perf/44104?Gcode=009_206'><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221118/wel_mv_44104.jpg/dims/quality/70/' alt='' class='lazyload' /></a><a class='pf-kv-text white on' href='/Perf/44104?Gcode=009_206'><p class='sub-tit'>나는 아무것도 모른다는 것을 안다</p><p class='main-tit'>뮤지컬 <br> 소크라테스 패러독스</p><p class='info-tit'>2022. 12. 14. ~ 2023. 02. 26. 서경대학교 공연예술센터 스콘1관</p></a></div><div class='kv-item'  colorbg=''><a  href='http://ticket.yes24.com/New/Genre/GenreBridge.aspx?genre=15457&id=1094&&Gcode=009_206'><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221103/wel_mv_43937_1.jpg/dims/quality/70/' alt='' class='lazyload' /></a><a class='pf-kv-text white on' href='http://ticket.yes24.com/New/Genre/GenreBridge.aspx?genre=15457&id=1094&&Gcode=009_206'><p class='sub-tit'>                        <br>                         <br></p><p class='main-tit'>                        <br>                         <br></p><p class='info-tit'>                        <br>                         <br></p></a></div><div class='kv-item'  colorbg=''><a  href='/Perf/43981?Gcode=009_206'><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221123/wel_mv_43981.jpg/dims/quality/70/' alt='' class='lazyload' /></a><a class='pf-kv-text white on' href='/Perf/43981?Gcode=009_206'><p class='sub-tit'></p><p class='main-tit'></p><p class='info-tit'></p></a></div><div class='kv-item'  colorbg=''><a  href='/Perf/44215?Gcode=009_206'><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221129/wel_mv_44215.jpg/dims/quality/70/' alt='' class='lazyload' /></a><a class='pf-kv-text white on' href='/Perf/44215?Gcode=009_206'><p class='sub-tit'>SO HAPPY IT HURTS</p><p class='main-tit'>브라이언 아담스 <br> 내한공연</p><p class='info-tit'>2023. 03. 02. 올림픽공원 SK올림픽핸드볼경기장</p></a></div><div class='kv-item'  colorbg=''><a  href='/Perf/43907?Gcode=009_206'><img src='http://tkfile.yes24.com/Upload2/Display/202210/20221027/wel_mv_43907.jpg/dims/quality/70/' alt='' class='lazyload' /></a><a class='pf-kv-text white on' href='/Perf/43907?Gcode=009_206'><p class='sub-tit'></p><p class='main-tit'></p><p class='info-tit'></p></a></div><div class='kv-item'  colorbg=''><a  href='/Perf/44250?Gcode=009_206'><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221130/wel_mv_44250.jpg/dims/quality/70/' alt='' class='lazyload' /></a><a class='pf-kv-text white on' href='/Perf/44250?Gcode=009_206'><p class='sub-tit'></p><p class='main-tit'></p><p class='info-tit'></p></a></div><div class='kv-item'  colorbg=''><a  href='http://ticket.yes24.com/New/Genre/GenreBridge.aspx?genre=15456&id=1078&&Gcode=009_206'><img src='http://tkfile.yes24.com/Upload2/Display/202210/20221021/wel_mv_43423.jpg/dims/quality/70/' alt='' class='lazyload' /></a><a class='pf-kv-text white on' href='http://ticket.yes24.com/New/Genre/GenreBridge.aspx?genre=15456&id=1078&&Gcode=009_206'><p class='sub-tit'></p><p class='main-tit'></p><p class='info-tit'></p></a></div><div class='kv-item'  colorbg=''><a  href='/Perf/43929?Gcode=009_206'><img src='http://tkfile.yes24.com/Upload2/Display/202210/20221028/wel_mv_43929.jpg/dims/quality/70/' alt='' class='lazyload' /></a><a class='pf-kv-text white on' href='/Perf/43929?Gcode=009_206'><p class='sub-tit'></p><p class='main-tit'></p><p class='info-tit'></p></a></div><div class='kv-item'  colorbg=''><a  href='/Perf/44163?Gcode=009_206'><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221121/wel_mv_44163.jpg/dims/quality/70/' alt='' class='lazyload' /></a><a class='pf-kv-text white on' href='/Perf/44163?Gcode=009_206'><p class='sub-tit'></p><p class='main-tit'></p><p class='info-tit'></p></a></div><div class='kv-item'  colorbg=''><a  href='/Perf/44037?Gcode=009_206'><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221128/wel_mv_44037.jpg/dims/quality/70/' alt='' class='lazyload' /></a><a class='pf-kv-text white on' href='/Perf/44037?Gcode=009_206'><p class='sub-tit'></p><p class='main-tit'></p><p class='info-tit'></p></a></div></div><div class='pf-kvslide-pager on2'><div class='pager-bg'><a href='#' class='on'><img src='http://tkfile.yes24.com/Upload2/Display/202212/20221201/20221129-44262.jpg/dims/quality/70/' alt='' class='lazyload' /><span></span></a><a href='#' class=''><img src='http://tkfile.yes24.com/Upload2/Display/202210/20221017/wel_mv_2022_s.jpg/dims/quality/70/' alt='' class='lazyload' /><span></span></a><a href='#' class=''><img src='http://tkfile.yes24.com/Upload2/Display/202205/20220510/wel_mv_42123_s.jpg/dims/quality/70/' alt='' class='lazyload' /><span></span></a><a href='#' class=''><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221110/20221108-44048.jpg/dims/quality/70/' alt='' class='lazyload' /><span></span></a><a href='#' class=''><img src='http://tkfile.yes24.com/Upload2/Display/202207/20220720/wel_mv_NEW-_s.jpg/dims/quality/70/' alt='' class='lazyload' /><span></span></a><a href='#' class=''><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221118/wel_mv_44104_s.jpg/dims/quality/70/' alt='' class='lazyload' /><span></span></a><a href='#' class=''><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221103/캣츠_1.jpg/dims/quality/70/' alt='' class='lazyload' /><span></span></a><a href='#' class=''><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221123/wel_mv_43981_s.jpg/dims/quality/70/' alt='' class='lazyload' /><span></span></a><a href='#' class=''><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221129/wel_mv_44215_s.jpg/dims/quality/70/' alt='' class='lazyload' /><span></span></a><a href='#' class=''><img src='http://tkfile.yes24.com/Upload2/Display/202210/20221027/wel_mv_43907_s.jpg/dims/quality/70/' alt='' class='lazyload' /><span></span></a><a href='#' class=''><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221129/20221128-44250.jpg/dims/quality/70/' alt='' class='lazyload' /><span></span></a><a href='#' class=''><img src='http://tkfile.yes24.com/Upload2/Display/202210/20221021/m_mainbig_43423_s.png/dims/quality/70/' alt='' class='lazyload' /><span></span></a><a href='#' class=''><img src='http://tkfile.yes24.com/Upload2/Display/202210/20221028/wel_mv_43929_s.jpg/dims/quality/70/' alt='' class='lazyload' /><span></span></a><a href='#' class=''><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221121/wel_mv_44163_s.jpg/dims/quality/70/' alt='' class='lazyload' /><span></span></a><a href='#' class=''><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221128/wel_mv_44037_s.jpg/dims/quality/70/' alt='' class='lazyload' /><span></span></a></div></div>
+
+    <div class="kvPlayer-wrap">
+        <div id="playerBigBanner" class="kv-player"></div>
+        <a href="#" class="movie-close"><img src="http://tkfile.yes24.com/imgNew/common/movie-close.png" /></a>
+    </div><!-- 유투브 플레이어 -->
+    <div class="pf-kvslide-dir">
+        <a href="#" class="pf-kv-prev"><img src="http://tkfile.yes24.com/imgNew/common/slide-dir-prev.png" alt="" /></a>
+        <a href="#" class="pf-kv-next"><img src="http://tkfile.yes24.com/imgNew/common/slide-dir-next.png" alt="" /></a>
+    </div><!-- 슬라이드 방향키-->
+ </div>
+
+ <script type="text/babel" data-presets="es2015,stage-2" src="http://tkfile.yes24.com/New/JS/BigBanner.js?v=247"></script>
+ 
+ <!--#### 빅배너 ####-->
+
+ <!--#### What's HOT ####-->
+ <section class="sec01">
+    <p class="cont-tit"><img src="http://tkfile.yes24.com/imgNew/main/tit1.png" alt="" /></p>
+    
+
+
+<div class="cont">
+    <div class="whot-area">
+        <ul id="ulWhatshot">
+        </ul>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        displayWhatshotBanner();
+    });
+
+    function displayWhatshotBanner() {
+        $.ajax({
+            async: true,
+            type: "POST",
+            url: "/New/Controls/Main/Ajax/axWhatshot.aspx",
+            data: { "RegionID": 'N_A0-002' },
+            dataType: "html",
+            success: function (data, textStatus) {
+                $("#ulWhatshot").html(data);
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                //$("#dialogAlert").jAlert({ "msg": "랭킹 정보를 조회 하는 중에 일시적인 오류가 발생하였습니다." });
+            },
+            beforeSend: function (xhr, settings) {
+                //jsf_com_AjaxLoader(jcAJAX_BEFORESEND, 0, 0, "", $("#divMainPopup"));
+            },
+            complete: function (xhr, textStatus) {
+                //jsf_com_AjaxLoader(jcAJAX_COMPLETE, 0, 0, "", $("#divMainPopup"));
+            }
+        });
+    }
+    
+</script>
+ </section>
+ <!--#### What's HOT ####-->
+
+ <!--#### Ticket Open & 중간띠배너 ####-->
+ <section class="sec02">
+    <p class="cont-tit"><img src="http://tkfile.yes24.com/imgNew/main/tit2-1.png" alt="" /></p>
+    
+    
+    <div class="cont">      
+        <div class="swiper-container ticketo">
+            <div class="swiper-wrapper">
+            <div class='swiper-slide'><a href='/Pages/Notice/NoticeMain.aspx?#id=12490&Gcode=009_208_001'><img src='http://tkfile.yes24.com/upload2/BoardNotice/202211/20221128/20221128-59c6cc39-ee3e-4ecb-8bc2-2261155e3b7d.jpg/dims/quality/70/' alt='' class='lazyload' /><div class='donut-area'><canvas id='chart-area12490' class='donut' /></div><div class='donut-dday today'>Today</div><div class='ticket-txt'><p class='ticket-date'>2022.12.01(목) 19:00</p><p class='ticket-tit'>안예은단독콘서트 ‘제6회 (안밀린) 오타쿠리스마스’ 티켓오픈 안내</p></div></a></div><div class='swiper-slide'><a href='/Pages/Notice/NoticeMain.aspx?#id=12483&Gcode=009_208_001'><img src='http://tkfile.yes24.com/upload2/PerfBlog/202211/20221130/20221130-44311.jpg/dims/quality/70/' alt='' class='lazyload' /><div class='donut-area'><canvas id='chart-area12483' class='donut' /></div><div class='donut-dday today'>Today</div><div class='ticket-txt'><p class='ticket-date'>2022.12.01(목) 14:00</p><p class='ticket-tit'>2022 전국투어 콘서트〈박창근〉- 수원앵콜 티켓오픈 안내</p></div></a></div><div class='swiper-slide'><a href='/Pages/Notice/NoticeMain.aspx?#id=12480&Gcode=009_208_001'><img src='http://tkfile.yes24.com/upload2/PerfBlog/202211/20221129/20221129-44262.jpg/dims/quality/70/' alt='' class='lazyload' /><div class='donut-area'><canvas id='chart-area12480' class='donut' /></div><div class='donut-dday today'>Today</div><div class='ticket-txt'><p class='ticket-date'>2022.12.01(목) 18:00</p><p class='ticket-tit'>COUNTDOWN FANTASY 2022-2023 티켓오픈안내</p></div><p class='ticket-tail'><span class='re'>단독</span></p></a></div><div class='swiper-slide'><a href='/Pages/Notice/NoticeMain.aspx?#id=12473&Gcode=009_208_001'><img src='http://tkfile.yes24.com/upload2/PerfBlog/202211/20221130/20221130-44315.jpg/dims/quality/70/' alt='' class='lazyload' /><div class='donut-area'><canvas id='chart-area12473' class='donut' /></div><div class='donut-dday today'>Today</div><div class='ticket-txt'><p class='ticket-date'>2022.12.01(목) 19:00</p><p class='ticket-tit'>맨스티어 [Master Life] 티켓오픈 안내</p></div><p class='ticket-tail'><span class='re'>단독</span></p></a></div><div class='swiper-slide'><a href='/Pages/Notice/NoticeMain.aspx?#id=12467&Gcode=009_208_001'><img src='http://tkfile.yes24.com/upload2/PerfBlog/202211/20221130/20221130-44252_2.jpg/dims/quality/70/' alt='' class='lazyload' /><div class='donut-area'><canvas id='chart-area12467' class='donut' /></div><div class='donut-dday today'>Today</div><div class='ticket-txt'><p class='ticket-date'>2022.12.01(목) 12:00</p><p class='ticket-tit'>시가렛 애프터 섹스 내한공연（Cigarettes After Sex Live in Seoul）티켓오픈 안내</p></div><p class='ticket-tail'><span class='or'>선예매</span></p></a></div><script>function displayDonut(){config.data.datasets[0].data = [12.5*(8-0),12.5*0];new Chart(document.getElementById('chart-area12490').getContext('2d'), config);config.data.datasets[0].data = [12.5*(8-0),12.5*0];new Chart(document.getElementById('chart-area12483').getContext('2d'), config);config.data.datasets[0].data = [12.5*(8-0),12.5*0];new Chart(document.getElementById('chart-area12480').getContext('2d'), config);config.data.datasets[0].data = [12.5*(8-0),12.5*0];new Chart(document.getElementById('chart-area12473').getContext('2d'), config);config.data.datasets[0].data = [12.5*(8-0),12.5*0];new Chart(document.getElementById('chart-area12467').getContext('2d'), config);}</script>
+            </div>                      
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>          
+    </div>
+    <a href="/Pages/Notice/NoticeMain.aspx?Gcode=009_208_002" class="list-more">티켓오픈 더보기 +</a>
+
+
+
+<script type="text/javascript">
+    var config = {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [50, 50], //주황색,흰색
+                backgroundColor: [
+                        '#ed8844', '#ebebeb'
+                    ],
+                borderWidth: [0, 0]
+            }]
+        },
+        options: {
+            animation: {
+                animateRotate: true,
+                duration: 2000
+            },
+            cutoutPercentage: [90],
+            tooltips: {
+                enabled: false
+            }
+        }
+    };
+
+    var num = 0;
+    $(window).on('scroll', function () {
+        var stop = $(this).scrollTop();
+        if (stop > 1000) {
+            if (num == 0) {
+                num = 1;
+                displayDonut();
+            }
+        } else {
+            num = 0;
+        }
+    });
+
+    if($(".swiper-container.ticketo > .swiper-wrapper > div").length < 3){
+        $(".sec02 > p").hide();
+        $(".sec02 > .cont").hide();
+        $(".sec02 > a").hide();
+    }
+</script>
+    
+
+    <div class="bnr-slide-bg" style="background:#000000;">
+    </div> <!--운영할때 색상넣는, 그냥 백그라운드-->
+    <div class="bnr-slide">
+        <div class="bnrslide">          
+            <div class='swiper-slide' style='display:block;' colorbg='#000000'><a href='http://ticket.yes24.com/New/Genre/GenreBridge.aspx?genre=15457&id=1089&&Gcode=009_209'><img src='http://tkfile.yes24.com/Upload2/Display/202210/20221005/wel_wide_43656.png/dims/quality/70/' alt='' class='lazyload' /></a></div><div class='swiper-slide'  colorbg=''><a href='/Perf/43301?Gcode=009_209'><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221123/wel_wide_43301.png/dims/quality/70/' alt='' class='lazyload' /></a></div><div class='swiper-slide'  colorbg=''><a href='/Perf/44035?Gcode=009_209'><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221129/wel_wide_44035.png/dims/quality/70/' alt='' class='lazyload' /></a></div><div class='swiper-slide'  colorbg='#5f328d'><a href='/Perf/43682?Gcode=009_209'><img src='http://tkfile.yes24.com/Upload2/Display/202210/20221005/wel_wide_43682.png/dims/quality/70/' alt='' class='lazyload' /></a></div><div class='swiper-pagination'><span class='active'></span><span></span><span></span><span></span></div>
+        </div>
+    </div>
+ 
+ </section>
+ <!--#### Ticket Open & 중간띠배너 ####-->
+
+ <!--#### Ranking & 이벤트/기획전 & Focus On ####-->
+ <section class="sec03">
+    <p class="cont-tit"><img src="http://tkfile.yes24.com/imgNew/main/tit3.png" alt="" /></p>
+    <div class="cont">
+        
+
+        <p class="tags" id="rankCategoryTab">
+            <a href="javascript:void(0);" categoryId='16'>#뮤지컬</a>
+            <a href="javascript:void(0);" categoryId='15'>#콘서트</a>
+            <a href="javascript:void(0);" categoryId='17'>#연극</a>
+            <a href="javascript:void(0);" categoryId='18'>#클래식</a>
+            <a href="javascript:void(0);" categoryId='20'>#전시</a>
+        </p>
+        <ol class="rank-list" id="olRanking">
+        </ol>
+        <a href="/Pages/Rank/dailyranking.aspx?Gcode=009_210_002" class="list-more">랭킹 더보기 +</a>
+    
+        <input type="hidden" id="salesRankDate" value="2022-12-01" />
+
+<script type="text/javascript">
+    var numRanking = 0;
+    var disRanking = 0;
+    $(window).on('scroll', function () {
+        var stop = $(this).scrollTop();
+        if (stop > 1800 && disRanking == 0) {
+            if (numRanking == 0) {
+                numRanking = 1;
+                displayRanking();
+            }
+        } else {
+            numRanking = 0;
+        }
+    }); 
+    
+    $("#rankCategoryTab a").click(function() {
+                jsf_rank_SelectTab($(this));
+                jsf_rank_loadDailyMainRank(1, $("#rankCategoryTab").attr("selectedCategoryId"), $("#salesRankDate").val(), $("#olRanking"));
+    });
+
+
+    function displayRanking(){
+        var rdnNum = (Math.floor(Math.random()*10))%2;
+        if(rdnNum == 0){
+            jsf_rank_SelectTab($("#rankCategoryTab a[categoryId='15']"));
+        }
+        else{
+            jsf_rank_SelectTab($("#rankCategoryTab a[categoryId='16']"));
+        }
+
+        jsf_rank_loadDailyMainRank(1, $("#rankCategoryTab").attr("selectedCategoryId"), $("#salesRankDate").val(), $("#olRanking"));
+
+        disRanking = 1;
+    }
+
+    function jsf_rank_loadDailyMainRank(periodType, categoryId, endTime, contentsContainer) {
+        $.ajax({
+            async: true,
+            type: "POST",
+            url: "/New/Controls/Main/Ajax/axRanking.aspx",
+            data: { 
+                pt: periodType,
+                ci: categoryId,
+                et: endTime
+            },
+            dataType: "html",
+            success: function (data, textStatus) {
+                contentsContainer.html(data);
+
+                $(".rank-list li").on('mouseenter',function(){
+                    $(this).find(".bg-img").stop().animate({
+                        width: 570+"px",
+                        height: 630+"px",
+                        marginTop: -315+"px",
+                        marginLeft: -285+"px"
+                     }, 500);   
+                });
+                $(".rank-list li").on('mouseleave',function(){
+                    $(this).find(".bg-img").stop().animate({
+                        width: 456+"px",
+                        height: 504+"px",
+                        marginTop: -252+"px",
+                        marginLeft: -228+"px"
+                     }, 500);   
+                });
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                //$("#dialogAlert").jAlert({ "msg": "랭킹 정보를 조회 하는 중에 일시적인 오류가 발생하였습니다." });
+                //alert("랭킹 정보를 조회 하는 중에 일시적인 오류가 발생하였습니다.");
+            },
+            beforeSend: function (xhr, settings) {
+                //jsf_com_AjaxLoader(jcAJAX_BEFORESEND, 0, 0, "", contentsContainer);
+            },
+            complete: function (xhr, textStatus) {
+                //jsf_com_AjaxLoader(jcAJAX_COMPLETE, 0, 0, "", contentsContainer);
+            }
+        });
+    }
+
+    function jsf_rank_SelectTab(tab) {
+            
+            $("#rankCategoryTab a").unbind("mouseover").bind("mouseover", function() {
+                $(this).addClass("on");
+            });
+
+            $("#rankCategoryTab a").unbind("mouseout").bind("mouseout", function() {
+                if($("#rankCategoryTab").attr("selectedCategoryId") != $(this).attr("categoryId"))
+                {
+                    $(this).removeClass("on");
+                }
+            });
+
+            $("#rankCategoryTab a").each(function() {
+                $(this).removeClass("on");
+            });
+
+            tab.addClass("on");
+
+            $("#rankCategoryTab").attr("selectedCategoryId", tab.attr("categoryId"));
+        }
+</script>
+        
+
+<div class="box-f"><!--왼쪽/오른쪽/중간 순서 유지 필요//-->
+    
+
+<!-- 이벤트/기획전 Left //-->
+<div class="box-f-slide1">
+    <div class="swiper-container boxf1">
+        <div class="swiper-wrapper">
+            <div class='swiper-slide'><a href='/Perf/43451?Gcode=009_211_001'><img src='http://tkfile.yes24.com/upload2/perfblog/202211/20221128/20221128-43451.jpg/dims/quality/70/' alt='' class='lazyload' /><div class='box-f1-txt'><p class='box-f1-tit'>엔젤티켓</p><p class='box-f1-tit2'>뮤지컬<br>지저스 크라이스트<br>수퍼스타</p><p class='box-f1-detail'><span class='box-f1-per'>20%</span><span class='box-f1-eve'>+ 2,400원 적립</span></p></div></a></div><div class='swiper-slide'><a href='/Perf/43662?Gcode=009_211_001'><img src='http://tkfile.yes24.com/upload2/perfblog/202211/20221128/20221128-43662.jpg/dims/quality/70/' alt='' class='lazyload' /><div class='box-f1-txt'><p class='box-f1-tit'>엔젤티켓</p><p class='box-f1-tit2'>뮤지컬<br>알로하, 나의 엄마들</p><p class='box-f1-detail'><span class='box-f1-per'>45%</span><span class='box-f1-eve'>+ 2,400원 적립</span></p></div></a></div><div class='swiper-slide'><a href='/Perf/43160?Gcode=009_211_001'><img src='http://tkfile.yes24.com/upload2/perfblog/202211/20221128/20221128-43160.jpg/dims/quality/70/' alt='' class='lazyload' /><div class='box-f1-txt'><p class='box-f1-tit'>엔젤티켓</p><p class='box-f1-tit2'>연극<br>아트</p><p class='box-f1-detail'><span class='box-f1-per'>45%</span><span class='box-f1-eve'>+ 2,400원 적립</span></p></div></a></div><div class='swiper-slide'><a href='/Perf/43999?Gcode=009_211_001'><img src='http://tkfile.yes24.com/upload2/perfblog/202211/20221128/20221128-43999.jpg/dims/quality/70/' alt='' class='lazyload' /><div class='box-f1-txt'><p class='box-f1-tit'>엔젤티켓</p><p class='box-f1-tit2'>연극<br>굿모닝 홍콩</p><p class='box-f1-detail'><span class='box-f1-per'>40%</span><span class='box-f1-eve'>+2,400원 적립</span></p></div></a></div><div class='swiper-slide'><a href='/Perf/44174?Gcode=009_211_001'><img src='http://tkfile.yes24.com/upload2/perfblog/202211/20221128/20221128-44174.jpg/dims/quality/70/' alt='' class='lazyload' /><div class='box-f1-txt'><p class='box-f1-tit'>엔젤티켓</p><p class='box-f1-tit2'>연극<br>MRS.MRI : 미세스 엠알아이</p><p class='box-f1-detail'><span class='box-f1-per'>30%</span><span class='box-f1-eve'>+ 2,400원 적립</span></p></div></a></div>
+        </div>
+        <div class="swiper-pagination boxf1-p"></div>
+    </div>
+</div>
+<!-- 이벤트/기획전 Left //-->
+    
+
+<!-- 이벤트/기획전 Right //-->
+<div class="box-f-slide2">
+    <div class="swiper-container boxf2">
+        <div class="swiper-wrapper">
+            <div class='swiper-slide'><a href='/Perf/43839?Gcode=009_211_003'><img src='http://tkfile.yes24.com/upload2/perfblog/202210/20221018/20221018-43839_1.jpg/dims/quality/70/' alt='' class='lazyload' /></a></div>
+        </div>  
+        <div class="swiper-button-next boxf2-next"></div>
+        <div class="swiper-button-prev boxf2-prev"></div>   
+    </div>
+</div>
+<!-- 이벤트/기획전 Right //-->
+    
+
+<!-- 이벤트/기획전 Center //-->
+<div class="box-f-bnrs">
+    <a href='http://ticket.yes24.com/Pages/Events/HotEvent/PromotionInfo.aspx?id=2577&&Gcode=009_211_002'><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221121/ev_bn_angel_45.jpg/dims/quality/70/' alt='' class='lazyload' /></a><a href='http://ticket.yes24.com/MDshop?Gcode=009_211_002'>
+    <img src='http://tkfile.yes24.com/Upload2/Display/202004/20200427/Ev_bn_goods.jpg/dims/quality/70/' alt='' class='lazyload' /></a>
+</div>
+<!-- 이벤트/기획전 Center //-->
+</div>
+
+    </div>
+
+    
+
+
+<div class="focuson">
+    <div class="focuson-wrap">
+        <div class='focus-txt'><p class='focus-tit'><span href='#'><img src='http://tkfile.yes24.com/imgNew/main/tit8.png' alt='' /></span></p><p class='focus-tit2'><a href='http://ticket.yes24.com/New/Genre/GenreBridge.aspx?genre=15457&id=1094&Gcode=009_212'>뮤지컬<br>캣츠</a></p>
+        <p class='focus-detail'><a href='http://ticket.yes24.com/New/Genre/GenreBridge.aspx?genre=15457&id=1094&Gcode=009_212'>전 세계가 사랑한 명작<br>오리지널 매력 그대로 컴백!</a>
+        </p></div><div class='focus-con'><div id='playerFocusOn' class='focus-con-movie'></div><div class='focus-con-img'>
+        <a href='#' title='dpqmDM_Df4s'><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221107/화면 캡처 2022-11-07 163303.jpg/dims/quality/70/' alt='' class='lazyload' /></a></div></div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+$(".focus-con-img a").on('click', function (e) { //포커스온 클릭하면
+    e.preventDefault();
+    $(this).parent(".focus-con-img").fadeOut(400); //이미지 페이드아웃으로 사라지면서
+
+    playerFocusOn.loadVideoById(
+    {
+        'videoId': $(".focus-con-img a").attr("title"),
+        'startSeconds': 0,
+        'endSeconds': 0,
+        'suggestedQuality': 'large'
+    });
+}); 
+</script>
+
+ </section>
+ <!--#### Ranking & 이벤트/기획전 & Focus On ####-->
+
+ <!--#### Musical & Play ####-->
+ <section class="sec04">
+    <p class="cont-tit num6l"><img src="http://tkfile.yes24.com/imgNew/main/tit4.png" alt="" /></p>
+    
+ 
+
+<div class="wing-wrap">
+    <div class="wing-list" id="divGenre_N_A0-006-01">
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    /*
+    var numGenre_N_A0_006_01 = 0;
+    var disGenre_N_A0_006_01 = 0;
+    $(window).on('scroll', function () {
+        var stop = $(this).scrollTop();
+        if (stop > 3500 && disGenre_N_A0_006_01 == 0) {
+            if (numGenre_N_A0_006_01 == 0) {
+                numGenre_N_A0_006_01 = 1;
+                displayGenreBanner();
+            }
+        } else {
+            numGenre_N_A0_006_01 = 0;
+        }
+    });
+    */
+
+    //$(document).ready(function () {
+        displayGenreBanner();
+    //});
+
+    function displayGenreBanner() {
+        $.ajax({
+            async: true,
+            type: "POST",
+            url: "/New/Controls/Main/Ajax/axGenre.aspx",
+            data: { "RegionID": 'N_A0-006-01' },
+            dataType: "html",
+            success: function (data, textStatus) {
+                $("#divGenre_N_A0-006-01").html(data);
+                //disGenre_N_A0_006_01 = 1;
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                //$("#dialogAlert").jAlert({ "msg": "랭킹 정보를 조회 하는 중에 일시적인 오류가 발생하였습니다." });
+            },
+            beforeSend: function (xhr, settings) {
+                //jsf_com_AjaxLoader(jcAJAX_BEFORESEND, 0, 0, "", $("#divMainPopup"));
+            },
+            complete: function (xhr, textStatus) {
+                //jsf_com_AjaxLoader(jcAJAX_COMPLETE, 0, 0, "", $("#divMainPopup"));
+            }
+        });
+    }
+    
+</script>
+ </section>
+ <!--#### Musical & Play ####-->
+
+ <!--#### Concert & Classic ####-->
+ <section class="sec04">
+    <p class="cont-tit num6l"><img src="http://tkfile.yes24.com/imgNew/main/tit5.png" alt="" /></p>
+    
+ 
+
+<div class="wing-wrap">
+    <div class="wing-list" id="divGenre_N_A0-006-02">
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    /*
+    var numGenre_N_A0_006_02 = 0;
+    var disGenre_N_A0_006_02 = 0;
+    $(window).on('scroll', function () {
+        var stop = $(this).scrollTop();
+        if (stop > 3500 && disGenre_N_A0_006_02 == 0) {
+            if (numGenre_N_A0_006_02 == 0) {
+                numGenre_N_A0_006_02 = 1;
+                displayGenreBanner();
+            }
+        } else {
+            numGenre_N_A0_006_02 = 0;
+        }
+    });
+    */
+
+    //$(document).ready(function () {
+        displayGenreBanner();
+    //});
+
+    function displayGenreBanner() {
+        $.ajax({
+            async: true,
+            type: "POST",
+            url: "/New/Controls/Main/Ajax/axGenre.aspx",
+            data: { "RegionID": 'N_A0-006-02' },
+            dataType: "html",
+            success: function (data, textStatus) {
+                $("#divGenre_N_A0-006-02").html(data);
+                //disGenre_N_A0_006_02 = 1;
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                //$("#dialogAlert").jAlert({ "msg": "랭킹 정보를 조회 하는 중에 일시적인 오류가 발생하였습니다." });
+            },
+            beforeSend: function (xhr, settings) {
+                //jsf_com_AjaxLoader(jcAJAX_BEFORESEND, 0, 0, "", $("#divMainPopup"));
+            },
+            complete: function (xhr, textStatus) {
+                //jsf_com_AjaxLoader(jcAJAX_COMPLETE, 0, 0, "", $("#divMainPopup"));
+            }
+        });
+    }
+    
+</script>
+ </section>
+ <!--#### Concert & Classic ####-->
+
+ <!--#### Exhibition & Kids ####-->
+ <section class="sec04">
+    <p class="cont-tit num6l"><img src="http://tkfile.yes24.com/imgNew/main/tit6.png" alt="" /></p>
+    
+ 
+
+<div class="wing-wrap">
+    <div class="wing-list" id="divGenre_N_A0-006-03">
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    /*
+    var numGenre_N_A0_006_03 = 0;
+    var disGenre_N_A0_006_03 = 0;
+    $(window).on('scroll', function () {
+        var stop = $(this).scrollTop();
+        if (stop > 3500 && disGenre_N_A0_006_03 == 0) {
+            if (numGenre_N_A0_006_03 == 0) {
+                numGenre_N_A0_006_03 = 1;
+                displayGenreBanner();
+            }
+        } else {
+            numGenre_N_A0_006_03 = 0;
+        }
+    });
+    */
+
+    //$(document).ready(function () {
+        displayGenreBanner();
+    //});
+
+    function displayGenreBanner() {
+        $.ajax({
+            async: true,
+            type: "POST",
+            url: "/New/Controls/Main/Ajax/axGenre.aspx",
+            data: { "RegionID": 'N_A0-006-03' },
+            dataType: "html",
+            success: function (data, textStatus) {
+                $("#divGenre_N_A0-006-03").html(data);
+                //disGenre_N_A0_006_03 = 1;
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                //$("#dialogAlert").jAlert({ "msg": "랭킹 정보를 조회 하는 중에 일시적인 오류가 발생하였습니다." });
+            },
+            beforeSend: function (xhr, settings) {
+                //jsf_com_AjaxLoader(jcAJAX_BEFORESEND, 0, 0, "", $("#divMainPopup"));
+            },
+            complete: function (xhr, textStatus) {
+                //jsf_com_AjaxLoader(jcAJAX_COMPLETE, 0, 0, "", $("#divMainPopup"));
+            }
+        });
+    }
+    
+</script>
+ </section>
+ <!--#### Exhibition & Kids ####-->
+
+ <!--#### Review & Interview ####-->
+ <section class="sec05">
+    <p class="cont-tit"><img src="http://tkfile.yes24.com/imgNew/main/tit7.png" alt="" /></p>
+    
+
+<div class="slide-position">
+    <div class="rni-slide-wrap">
+        <div class="swiper-container rni-slide">
+            <div class="swiper-wrapper">
+                <div class='swiper-slide'><a href='http://ticket.yes24.com/New/Magazine/Magazine/MagazineMain.aspx?mId=19258&Gcode=009_214'><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221129/에쿠우스 copy.jpg/dims/quality/70/' alt='' class='lazyload' />
+                <div class='rni-box'><p class='rni-txt'>연극 <에쿠우스> - 시간이 흘러도 여전히 파격적인</p><p class='rni-square'>카툰</p></div></a></div><div class='swiper-slide'><a href='http://ticket.yes24.com/New/Magazine/Magazine/MagazineMain.aspx?mId=19252&Gcode=009_214'><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221115/80142.jpg/dims/quality/70/' alt='' class='lazyload' />
+                <div class='rni-box'><p class='rni-txt'>뮤지컬 <브로드웨이 42번가> 레전드의 귀환을 알리다!</p><p class='rni-square'>공연뉴스</p></div></a></div><div class='swiper-slide'><a href='http://ticket.yes24.com/New/Magazine/Magazine/MagazineMain.aspx?mId=19256&Gcode=009_214'><img src='http://tkfile.yes24.com/Upload2/Display/202211/20221122/드라큘라_p.png/dims/quality/70/' alt='' class='lazyload' /><div class='rni-box'><p class='rni-txt'>
+                뮤지컬 <드라큘라> - 400년의 비극을 품은 불변의 사랑 이야기</p><p class='rni-square'>카툰</p></div></a></div> 
+            </div>
+                <div class="swiper-button-next rni-next"></div>
+                <div class="swiper-button-prev rni-prev"></div>
+            </div>       
+    </div>
+</div>
+ </section>
+ <!--#### Review & Interview ####-->
+
+ <!--#### Information ####-->
+ <section class="sec06">
+    <div class="cont">
+        <div class="con-left">
+            <p class="tell"><img src="http://tkfile.yes24.com/imgNew/main/tell.png" alt="" /></p>
+            <dl>
+                <dt>평일</dt><dd>09:00~18:00</dd>
+                <dt>토요일</dt><dd>09:00~17:00<span>(일요일 및 공휴일 휴무)</span></dd>
+            </dl>
+        </div>
+        <div class="con-center">
+            <a href="/New/Notice/NoticeMain.aspx?Gcode=009_215" target="_blank" class="cca1">공지사항</a>
+            <a href="/UserGuide/Guide?Gcode=009_215" target="_blank" class="cca2">이용안내</a>
+            <a href="/UserGuide/FAQ" target="_blank" class="cca3">FAQ</a>
+            <a href="/UserGuide/inquiry" target="_blank" class="cca4">티켓판매안내</a>
+        </div>
+        <div class="con-right">
+            <div class="social">
+                <a href="https://www.facebook.com/YES24Play" class="soc1"><img src="http://tkfile.yes24.com/imgNew/main/social1.png" alt="" /></a>
+                <a href="https://www.instagram.com/yes24ticket" class="soc2"><img src="http://tkfile.yes24.com/imgNew/main/social2.png" alt="" /></a>
+                <a href="https://pf.kakao.com/_vRvxcV" class="soc3"><img src="http://tkfile.yes24.com/imgNew/main/social3.png" alt="" /></a>
+            </div>
+            <div class="appdown">
+                <a href="https://play.google.com/store/apps/details?id=com.yes24.ticket"><img src="http://tkfile.yes24.com/imgNew/main/appdown1.png" alt="" /></a>
+                <a href="https://itunes.apple.com/kr/app/yeseu24-gong-yeon-yemae/id937042887?l=en&mt=8"><img src="http://tkfile.yes24.com/imgNew/main/appdown2.png" alt="" /></a>
+            </div>
+            <a href="https://www.culture.go.kr/deduction/main.do" class="deduction" target="_blank"><img src="http://tkfile.yes24.com/imgNew/main/deduction.png" alt="" /></a>
+        </div>
+    </div>
+ </section>
+ <!--#### Information ####-->
+
+ <!--#### Main Popup ####-->
+ <div class="sec07">
+    
+
+<div class="pop-wrap" id="divMainPopup">
+</div>
+
+<div class="pop-bottom">
+    <input type="checkbox" id="chkToday" onclick="closeMainPopup();" /><label for="pop-close1">오늘 그만보기</label> 
+    <a href="javascript:void(0);" onclick="closeMainPopup();"></a>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (getCookie("MainPopup") != "OK") {
+            getMainPopup();
+        } else {
+            $(".sec07").hide();
+        }
+    });
+
+    function getMainPopup(){
+        $.ajax({
+            async: true,
+            type: "POST",
+            url: "/New/Controls/Main/Ajax/axPopup.aspx",
+            dataType: "html",
+            success: function (data, textStatus) {
+                if (data != "") {
+                    $("#divMainPopup").html(data);
+                    $(".sec07").show();
+                }
+                else {
+                    $(".sec07").hide();
+                }
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                //$("#dialogAlert").jAlert({ "msg": "랭킹 정보를 조회 하는 중에 일시적인 오류가 발생하였습니다." });
+            },
+            beforeSend: function (xhr, settings) {
+                //jsf_com_AjaxLoader(jcAJAX_BEFORESEND, 0, 0, "", $("#divMainPopup"));
+            },
+            complete: function (xhr, textStatus) {
+                //jsf_com_AjaxLoader(jcAJAX_COMPLETE, 0, 0, "", $("#divMainPopup"));
+            }
+        });
+    }
+
+    function closeMainPopup() {
+
+        if ($("#chkToday").is(":checked")) {
+            setCookie('MainPopup', 'OK', 1);
+        }
+
+        $(".sec07").hide();
+    }
+
+    function fParentLink(url, linkTargetType) {
+
+        if (linkTargetType == "2") {
+            var openNewWindow = window.open("about:blank");
+            openNewWindow.location.href = url;
+        }
+        else {
+            parent.location.href = url;
+        }
+    }
+</script>
+ 
+ </div>
+ <!--#### Main Popup ####-->
+
+ <!--#### Circle Banner ####-->
+    
+
+ <div class="float-bnr">
+    <div class="float-bnrs" id="divCircle">
+    </div>
+ </div>
+ 
+
+ <script type="text/javascript">
+
+     $(function(){
+        displayCircleBanner();
+     });
+
+     function displayCircleBanner() {
+         $.ajax({
+             async: true,
+             type: "POST",
+             url: "/New/Controls/Main/Ajax/axCircle.aspx",
+             data: { "RegionID": 'N_A0-009' },
+             dataType: "html",
+             success: function (data, textStatus) {
+                 $("#divCircle").html(data);
+
+                 /*플로팅배너 배너버튼동작*/
+                 $(".float-bnr-btn").on('mouseenter', function (e) {
+                     e.preventDefault();
+                     $(".float-bnr-btn").fadeOut();
+                     $(".float-bnr-img").fadeIn();
+                 });
+                 $(".float-bnr-img").on('mouseleave', function (e) {
+                     e.preventDefault();
+                     $(".float-bnr-btn").fadeIn();
+                     $(".float-bnr-img").fadeOut();
+                 });
+
+                 /*스크롤하면 600px쯤에서 헤더부분 다시 보이게, 상세보기 스크롤 상단*/
+                 var bnrTop = parseInt($(".float-bnr-btn").css("top"));
+                 /*스크롤하면 600px쯤에서 헤더부분 다시 보이게*/
+                $(window).on('scroll',function(){
+                    var sctop = $(this).scrollTop();
+                    var newbnrTop = (sctop-625) + bnrTop;
+
+                    /*플로팅배너 배너스크롤동작*/
+                    if (newbnrTop > 0) {
+                        if (newbnrTop < 3070) {
+                            $(".float-bnrs").css({ "position": "fixed", "top": "209px" });
+                        } else {
+                            $(".float-bnrs").css({ "position": "absolute", "top": "3070px" });
+                        }
+                    } else {
+                        $(".float-bnrs").css({ "position": "absolute", "top": "0" });
+                    }
+                });
+
+             },
+             error: function (xhr, textStatus, errorThrown) {
+                 //$("#dialogAlert").jAlert({ "msg": "랭킹 정보를 조회 하는 중에 일시적인 오류가 발생하였습니다." });
+             },
+             beforeSend: function (xhr, settings) {
+                 //jsf_com_AjaxLoader(jcAJAX_BEFORESEND, 0, 0, "", $("#divMainPopup"));
+             },
+             complete: function (xhr, textStatus) {
+                 //jsf_com_AjaxLoader(jcAJAX_COMPLETE, 0, 0, "", $("#divMainPopup"));
+             }
+         });
+     }
+    
+</script>
+ <!--#### Circle Banner ####-->
+
+  <!--#### Welfare/Geps Popup ####-->
+ <div>
+    
+    
+ </div>
+ <!--#### Welfare/Geps Popup ####-->
+
+ <!--#### Footer ####-->
+    
+
+<input type="hidden" name="machine" value="YTK39" />
+
+<footer>
+    <div class="cont">
+        <div class="footer-menu">
+            <a href="http://company.yes24.com/" target="_blank">회사소개</a>
+            <a href="http://www.yes24.com/notice/service.aspx" target="_blank">이용약관</a>
+            <a href="http://www.yes24.com/notice/privacypolicy.aspx" target="_blank" class="fb">개인정보처리방침</a>
+            <a href="http://www.yes24.com/notice/youthpolicy.aspx" target="_blank">청소년보호정책</a>
+            <a href="http://ticket.yes24.com/Pages/UserGuide/BookingGuide.aspx" target="_blank">이용안내</a>
+            <a href="/UserGuide/inquiry" target="_blank">티켓판매안내</a>
+            <ul class="family">
+                <li><a href="#" class="family-btn">Family Site</a></li>
+                <li><a href="http://www.istyle24.com/" target="_blank">iSTYLE24</a></li>
+                <li><a href="http://hansaeyes24.com/" target="_blank">한세예스24홀딩스</a></li>
+                <li><a href="https://www.hansae.com/" target="_blank">한세실업</a></li>
+                <li><a href="http://hansaedreams.co.kr/" target="_blank">한세드림</a></li>
+                <li><a href="http://hansaemk.com" target="_blank">한세MK</a></li>
+                <li><a href="https://www.curlysue.co.kr/curlysue_new/" target="_blank">컬리수</a></li>
+                <li><a href="https://www.yes24.vn/" target="_blank">YES24 Vietnam</a></li>
+                <li><a href="http://www.dongapublishing.com/main.donga" target="_blank">동아출판</a></li>
+            </ul>
+        </div>
+        <div class="footer-txt">
+            <a href="/New/Main.aspx?Gcode=009_201" class="flogo"><img src="http://tkfile.yes24.com/imgNew/common/flogo.png" alt="" /></a>
+            <div class="footxt">
+                <p>예스이십사㈜</p>
+                <p class="gray">서울시 영등포구 은행로 11, 5층~6층(여의도동,일신빌딩)<br />대표  김석환  |  개인정보보호책임자 : 권민석 yes24help@yes24.com<br />사업자등록번호  229-81-37000  |  통신판매업신고  제 2005-02682호 
+                    <a href="http://www.ftc.go.kr/www/bizCommList.do?key=232" target="_blank">사업자 정보확인</a>
+                <br>호스팅 서비스사업자 : 예스이십사㈜</p>
+                <p>Copyright © YES24 Corp. All Rights Reserved.</p>
+            </div>
+            <div class="foo-right">
+                <p class="mark"><img src="http://tkfile.yes24.com/imgNew/common/fmark.png" alt="" /><a href="https://mall.sgic.co.kr/csh/iutf/sh/shop/CSHINFO004VM0.mvc?tm=3&q_sk=2&q_sv=2298137000" target="_blank">서비스가입사실확인</a></p>
+                <p class="fservice">고객님은 안전거래를 위한 현금 등으로 결제 시<br /> 
+                저희 쇼핑몰에서 가입한 구매안전서비스를 <br />
+                이용하실 수 있습니다.    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<a href="#" class="return-top"><img src="http://tkfile.yes24.com/imgNew/common/return-top.png" alt="" /></a>
+
+
+
+<!-- Google 분석 -->
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-28070160-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+<!-- Google 분석 -->
+
+<!-- Google 광고 -->
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1056776890;
+    var google_conversion_label = "xS_KCLbd8gMQusX09wM";
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+    
+    function jsf_GoogleServiceDown() {
+        var element = document.createElement("script") ;
+        element.src = "http://www.googleadservices.com/pagead/conversion.js";
+        document.body.appendChild(element);
+    }
+
+    jsf_GoogleServiceDown();
+
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1056776890/?value=0&amp;label=xS_KCLbd8gMQusX09wM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<!-- Google 광고 -->
+
+<!-- Comas 광고 -->
+<script type="text/javascript"> 
+
+</script> 
+<script type="text/javascript" src="http://tkfile.yes24.com/New/Js/comas.js"></script>
+<!-- Comas 광고 -->
+
+<!-- Wise Log -->
+
+<script type="text/javascript" src="http://www.yes24.com/javascript/wlo.js"></script>
+
+<script type="text/javascript">
+    _n_sid = "08070200045";
+    _n_uid_cookie = "WiseLogParam";
+    _n_info1_cookie = "PID";
+    n_logging();
+</script>
+<!-- Wise Log -->
+
+
+ <!--#### Footer ####-->   
+</form>
+
+  
+
+  
+<script type='text/javascript' src='http://tkfile.yes24.com/New/Js/Main.js?v=247'></script>
+
+<link rel='stylesheet' type='text/css' href='http://tkfile.yes24.com/New/Css/main_2.css?v=20201228' /> 
+<link rel='stylesheet' type='text/css' href='http://tkfile.yes24.com/New/Css/swiper_min.css' />
+<link rel='stylesheet' type='text/css' href='http://tkfile.yes24.com/New/Css/jquery.mCustomScrollbar.css' />
+
+  
+
+<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+  
+<script type="text/javascript">
+    var playerFocusOn;
+    var playerBigBanner;
+    function onYouTubeIframeAPIReady() {
+        playerFocusOn = new YT.Player('playerFocusOn', {
+            videoId: '',
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+
+        playerBigBanner = new YT.Player('playerBigBanner', {
+            videoId: '',
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    }
+
+    function onPlayerReady(event) {
+        event.target.stopVideo();
+    }
+
+    function onPlayerStateChange(event) {
+        playerState = event.data == YT.PlayerState.ENDED ? '종료됨 (0)' :
+                              event.data == YT.PlayerState.PLAYING ? '재생 중 (1)' :
+                              event.data == YT.PlayerState.PAUSED ? '일시중지 됨 (2)' :
+                              event.data == YT.PlayerState.BUFFERING ? '버퍼링 중 (3)' :
+                              event.data == YT.PlayerState.CUED ? '동영상 신호 (5)' :
+                              event.data == -1 ? '시작되지 않음 (-1)' : '예외';
+
+        if (event.data == YT.PlayerState.ENDED) {
+            if (event.target.a.id == "playerFocusOn")
+                $(".focus-con-img").fadeIn();
+
+            if (event.target.a.id == "playerBigBanner")
+                $(".movie-close").click();
+        }
+
+    }
+
+    $(document).ready(function () {
+        $('.lazyload').Lazy({
+            effect: "fadeIn",
+            effectTime: 200,
+            defaultImage: 'http://tkfile.yes24.com' + '/imgNew/common/noimg.gif'
+        });
+
+        var ua = window.navigator.userAgent.toLowerCase();
+        if (/iphone/.test(ua) || /android/.test(ua) || /opera/.test(ua) || /bada/.test(ua)) {
+            if (confirm('모바일 웹서비스 이용이 가능합니다.\r\n모바일웹으로 이동하시겠습니까? ')) {
+                location.href = 'http://m.ticket.yes24.com';
+            }
+        }
+    });
+
+
+</script>
+
+</body>
+</html>
+
+
