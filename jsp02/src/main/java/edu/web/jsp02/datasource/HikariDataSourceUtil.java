@@ -10,7 +10,7 @@ public class HikariDataSourceUtil {
     private static HikariDataSourceUtil instance = null;
     
     private HikariDataSource ds; // connection을 할 수 있음. dao에서 해야함. 그러니깐 dao 클래스에서 사용할 수 있도록 생성, 리턴을 해야함.
-    
+    // test
     private HikariDataSourceUtil() {
         // HikarlCP을 사용하기 위한 설정(configuration)
         HikariConfig config = new HikariConfig();
