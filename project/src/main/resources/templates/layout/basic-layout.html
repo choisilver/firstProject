@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <meta charset="UTF-8">
+        <title>Spring Boot</title>
+        
+        <!-- 지혜 / 반응형 웹(설정 일부) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <!-- 지혜 / OpenGraph: 웹페이지가 SNS 또는 OpenGraph를 활용한 사이트로 공유될 때 사용되는 정보 -->
+        <!-- 페북이나 카톡 링크 공유할 때 제목, 이미지, 페이지 링크가 간략하게 나타나는 경우 등등 -->
+        <meta property="og:title" content="여기에 페이지나 사이트 제목" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image"
+            content="여기에 사이트 로고나 이미지" />
+        <meta property="og:url"
+            content="여기에 페이지 주소" />
+        <meta property="og:site_name" content="여기에 사이트 제목? 예스이십사는 title이랑 똑같게 한 듯여" />
+        
+        <title>BOOQUE</title>
+        <link rel='shortcut icon'
+            href='https://cdn.discordapp.com/attachments/1047044304859828280/1047794167432093716/KakaoTalk_20221201_150042749.jpg'     
+            type='image/x-icon' />
+            <!-- 여기에 사이트 로고! 탭에 사이트제목 옆에 띄울 거 -->
+            
+        <!-- 지혜 / 각종 자바스크립트 파일들..... -->
+            
+        <script type='text/javascript'
+            src='http://tkfile.yes24.com/New/Js/jquery-3.4.1_min.js'></script>
+        
+        
+        <script type='text/javascript'
+            src='http://tkfile.yes24.com/New/Js/swiper_min.js'></script>
+        <script type='text/javascript'
+            src='http://tkfile.yes24.com/New/Js/Chart.bundle_min.js'></script>
+        <script type='text/javascript'
+            src='http://tkfile.yes24.com/New/Js/utils.js'></script>
+        <script type='text/javascript'
+            src='http://tkfile.yes24.com/New/Js/jquery.mCustomScrollbar_min.js'></script>
+        <script type='text/javascript'
+            src='http://tkfile.yes24.com/New/Js/common.js?v=916'></script>
+        <script type='text/javascript'
+            src='http://tkfile.yes24.com/New/Js/jquery.lazy.min.js'></script>
+        <script type='text/javascript'
+            src='http://tkfile.yes24.com/New/Js/jquery.cookie.js'></script>
+        <script type='text/javascript'
+            src='http://tkfile.yes24.com/New/Js/jquery.url.js'></script>
+        <script type='text/javascript'
+            src='http://tkfile.yes24.com/New/Js/base64.js'></script>
+        <script type='text/javascript'
+            src='http://tkfile.yes24.com/New/Js/babel.js'></script>
+        <script type='text/javascript'
+            src='http://tkfile.yes24.com/New/Js/polyfill.js'></script>
+        <script type='text/javascript'
+            src='http://tkfile.yes24.com/New/Js/Main.js?v=916'></script>
+        <script type='text/javascript'
+            src='/inc/js/custom-1.8.21/ui/jquery-ui-1.8.21.custom.min.js'></script>
+        <script type='text/javascript'
+            src='http://tkfile.yes24.com/New/Js/jry_home_jdefault.js'></script>
+        <script type='text/javascript'
+            src='http://tkfile.yes24.com/New/Js/jry_home_jdialog.js'></script>
+        <script type='text/javascript' src='/inc/js/jry_default_new.js?v=916'></script>
+        
+        <!-- 지혜 / 각종 css 파일들...... -->
+        
+        <link rel='stylesheet' type='text/css'
+            href='http://tkfile.yes24.com/New/Css/reset.css' />
+        <link rel='stylesheet' type='text/css'
+            href='http://tkfile.yes24.com/New/Css/swiper.css' />
+        <link rel='stylesheet' type='text/css'
+            href='http://tkfile.yes24.com/New/Css/jquery.mCustomScrollbar.css' />
+        <link rel='stylesheet' type='text/css'
+            href='http://tkfile.yes24.com/New/Css/common.css?v=13' />
+        <link rel='stylesheet' type='text/css'
+            href='http://tkfile.yes24.com/New/Css/main2.css?v=2020012203' />
+        
+        
+        
+        <style type="text/css">
+                img.booque {
+                  width: 20%;
+                  height: auto;
+                }
+        
+        
+        .perform-top {
+            overflow: visible !important;
+        }
+        
+        body {
+            font-family: 'NanumBarunGothic', '맑은 고딕', 'Malgun Gothic', sans-serif;
+        }
+        
+        
+        #booq-logo {
+            left: 60px;
+        }
+
+
+    </style>
+</head>
+
+    <body>
+        <!--/* header.html 프래그먼트(HTML 조각)를 삽입 */-->
+        <div th:replace="fragments/header :: header"></div>
+        
+        <!--/* 메인 컨텐트가 삽입될 위치 */-->
+        <div layout:fragment="content"></div>
+        
+        <!--/* footer.html 프래그먼트(HTML 조각)를 삽입 */-->
+        <div th:replace="fragments/footer :: footer"></div>
+        
+        <!--/* 페이지에서 사용되는 자바스크립트가 삽입될 위치 */-->
+        <th:block layout:fragment="script"></th:block>
+        
+    </body>
+</html>

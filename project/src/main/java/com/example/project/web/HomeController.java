@@ -9,39 +9,14 @@ public class HomeController {
 
     @GetMapping("/")
     public String home() {
-        return "projectHome2";
+        return "main";
     }
-    
-    @GetMapping("/yes")
-    public String yes() {
-        return "yes";
-    }
-    
-    @GetMapping("/best")
-    public String bestseller() {
-        return "banner/best";
-    }
-    @GetMapping("/bslider")
-    public String boot() {
-        return "banner/bslider";
-    }
-    @GetMapping("/test")
-    public String test() {
-        return "test/testslider";
-    }
-    @GetMapping("/slider")
-    public String slider() {
-        return "banner/slider";
-    }
-    @GetMapping("/kyobo")
-    public String kyobo() {
-        return "kyobo";
-    }
+    @GetMapping("/search")
+    public void search() {
         
-    @GetMapping("/footer")
-    public String footer() {
-            return "fragments/footer";
     }
+    
+    
     
     
     
