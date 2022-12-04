@@ -2,6 +2,7 @@ package com.example.spring03.web;
 
 import java.util.List;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +26,7 @@ public class PostController {
     
     private final PostService postService;
     
+//    @PreAuthorize("hasRol('USER')")
     @GetMapping("/create") // GET 방식의 /post/create 요청을 처리하는 메서드.
     public void create() {
         log.info("create()");
@@ -32,6 +34,7 @@ public class PostController {
         // /post/create.html
     }
 
+//    @PreAuthorize("hasRol('USER')")
     @PostMapping("/create") // Post 방식의 /post/create 요청을 처리하는 메서드.
     public String create(PostCreateDto dto, RedirectAttributes attrs) {
         log.info("create(dto={})", dto);
@@ -55,6 +58,7 @@ public class PostController {
         model.addAttribute("post", post);
     }
     
+//    @PreAuthorize("hasRol('USER')")
     @PostMapping("/delete")
     public String delete(Integer id, RedirectAttributes attrs) {
         log.info("delete(id={})", id);
@@ -66,6 +70,7 @@ public class PostController {
         return "redirect:/";
     }
     
+    @PreAuthorize("hasRol('USER')")
     @PostMapping("/update")
     public String update(PostUpdateDto dto) {
         log.info("update(dto={})", dto);

@@ -34,7 +34,7 @@ public class MemberRepositoryTests {
         memberRepository.save(user1); // DB table에 insert         
     }
     
-//     @Test
+     @Test
     public void test2() {
         // USER + ADMIN 권한을 갖는 회원 등록
         Member admin1 = Member.builder()
